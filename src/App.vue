@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <!-- <v-app>
+      <MyHeader/>
+    </v-app> -->
+    <v-main>
+      <!-- <TodoList/> -->
+      <DeneE :title="title"/>
+    </v-main>
+  </v-app>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+
+
+<script setup>
+// import MyHeader from './components/MyHeader.vue';
+// import TodoList from './components/TodoList.vue';
+import DeneE from './components/DeneE.vue';
+import { ref } from 'vue';
+
+const title = ref('Kocamanbir başlık');
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<script>
+// You can still have a separate script section for other options or methods if needed
+export default {
+  name: 'App',
+
+  components: {
+    // MyHeader,
+    // TodoList,
+    DeneE,
+  },
+};
+</script>
