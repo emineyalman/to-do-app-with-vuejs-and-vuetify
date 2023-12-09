@@ -2,7 +2,7 @@
   <div class="cont">
     <v-container>
       <h3 style="color: #333; font-family: 'Arial', sans-serif;">TO-DO APP</h3>
-     <h1>{{ title }}</h1>
+     <!-- <h1>{{ title }}</h1> -->
     <input @keydown.enter.prevent="Submit" placeholder="Add New Todo" type="text" v-model="inpName" class="bu">
     <button  @click="addEl" style="background: #4caf50; color: white; padding: 10px; border: none; cursor: pointer;">Add</button>
     
@@ -16,7 +16,7 @@
     </transition-group>
   </v-container>
   </div>
- <BaskaBu :bu="titleother" @addTodo="addEl">Burada mısın</BaskaBu>
+ <BaskaBu :bu="titleother" @addTodo="addEl" :products="products">Burada mısın</BaskaBu>
 </template>
 
 <script setup>
@@ -55,7 +55,7 @@ const deleteİn = (index) =>{
 <script>
 
 export default {
-  props:["title"],
+  // props:["title"],
   components:BaskaBu,
 
 }

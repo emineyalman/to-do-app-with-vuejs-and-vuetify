@@ -1,12 +1,13 @@
 <template>
   <v-app>
-    <!-- <v-app>
-      <MyHeader/>
-    </v-app> -->
+   
+      <!-- <MyHeader/> -->
+    
     <v-main>
-      <!-- <TodoList/> -->
-      <DeneE :title="title"/>
+     <TodoList/> 
+      <!-- <DeneE :title="title"/> -->
     </v-main>
+    <!-- <router-view></router-view> -->
   </v-app>
 </template>
 
@@ -14,12 +15,12 @@
 
 
 <script setup>
-// import MyHeader from './components/MyHeader.vue';
-// import TodoList from './components/TodoList.vue';
-import DeneE from './components/DeneE.vue';
-import { ref } from 'vue';
+//  import MyHeader from './components/MyHeader.vue';
+import TodoList from './components/TodoList.vue';
+// import DeneE from './components/DeneE.vue';
+// import { ref } from 'vue';
 
-const title = ref('Kocamanbir başlık');
+// const title = ref('Kocamanbir başlık');
 </script>
 
 <script>
@@ -29,8 +30,8 @@ export default {
 
   components: {
     // MyHeader,
-    // TodoList,
-    DeneE,
+   TodoList,
+    // DeneE,
   },
 };
 </script>
